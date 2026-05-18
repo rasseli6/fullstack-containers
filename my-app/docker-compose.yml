@@ -1,0 +1,28 @@
+services:
+  frontend:
+    image: phonebook-frontend
+
+  backend:
+    image: phonebook-backend
+    environment:
+      - MONGODB_URI=mongodb://root:example@mongo:27017/phonebook?authSource=admin
+      - PORT=3001
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: phonebook
+
+  nginx:
+    image: nginx:1.29
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    depends_on:
+      - frontend
+      - backend
