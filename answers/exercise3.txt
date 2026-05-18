@@ -1,0 +1,50 @@
+fs-containers % docker start -i elegant_williamson
+root@c67ddb48651b:/# apt-get update
+Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [136 kB]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/restricted arm64 Packages [55.1 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [136 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/main arm64 Packages [62.4 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/universe arm64 Packages [48.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]    
+Get:8 http://archive.ubuntu.com/ubuntu resolute/multiverse arm64 Packages [298 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/restricted arm64 Packages [231 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main arm64 Packages [1860 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/universe arm64 Packages [19.9 MB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 Packages [95.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/universe arm64 Packages [48.9 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/restricted arm64 Packages [117 kB]
+Fetched 23.3 MB in 2s (13.2 MB/s)                           
+Reading package lists... Done
+root@c67ddb48651b:/# apt-get -y install nano
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Solving dependencies... Done
+Suggested packages:
+  hunspell
+The following NEW packages will be installed:
+  nano
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 295 kB of archives.
+After this operation, 934 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main arm64 nano arm64 8.7.1-1 [295 kB]
+Fetched 295 kB in 0s (1359 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 1.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 1.)
+debconf: falling back to frontend: Teletype
+Selecting previously unselected package nano.
+(Reading database ... 7720 files and directories currently installed.)
+Preparing to unpack .../nano_8.7.1-1_arm64.deb ...
+Unpacking nano (8.7.1-1) ...
+Setting up nano (8.7.1-1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) does not exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) does not exist
+root@c67ddb48651b:/# nano /usr/src/app/index.js 
+root@c67ddb48651b:/# exit
+exit
