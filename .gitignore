@@ -9,3 +9,5 @@ todo-app/test-results/
 todo-app/playwright-report/
 todo-app/playwright/.cache/
 redis_data/
+todo-tests/playwright-report/
+todo-tests/test-results/
